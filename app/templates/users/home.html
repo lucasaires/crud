@@ -1,0 +1,18 @@
+{% extends 'users/base.html' %}
+
+{% block title %}Cadastro {% endblock %}
+
+{% block content %}
+
+    <form action="{% url 'users' %}" method="post">
+    {% csrf_token %}
+        <div style="text-align: center; flex-direction: column; display: flex;" class="container mt-5">
+            Nome <input name="name" class="form-control-sm" type="text" placeholder="Digite nome" />
+            Email <input name="email" class="form-control-sm" type="text" placeholder="Digite email" />
+            <button class="form-control-sm"> Enviar </button>
+        </div>
+    </form>
+
+
+{% endblock %}
+
